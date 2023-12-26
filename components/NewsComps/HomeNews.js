@@ -6,7 +6,7 @@ import styles from '../../styles/HomeNews.module.css';
 import Link from 'next/link';
 import TranslateWeather from '../../modules/TranslateWeather';
 import FormatWeatherHours from '../../modules/FormatWeatherHours';
-import FindWeatherImage from '../../modules/findWeatherImage';
+import FindWeatherImage from '../../modules/FindWeatherImage';
 import { LoadingIcon } from '../../modules/LoadingIcon';
 import '@vivid-planet/react-image/dist/react-image.css';
 
