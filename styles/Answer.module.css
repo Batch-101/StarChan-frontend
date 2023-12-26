@@ -1,0 +1,75 @@
+.answerContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.answerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 15px;
+    flex-shrink: 0;
+    width: 230px;
+    height: 100%;
+    background-color: #21275A;
+}
+
+
+.username {
+    margin-bottom: 10px;
+}
+
+.role {
+    font-style: italic;
+    margin-bottom: 10px;
+
+}
+
+
+.answerTextContainer {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    background-color: #F5F2CB;
+}
+
+.answerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #5F2F80;
+}
+
+.answerText * {
+    color: inherit;
+}
+
+.profileImg {
+    margin: 25px 0 5px;
+}
+
+.messageImg {
+    max-width: 500px;
+    max-height: 300px;
+    margin: 10px 0 40px;
+}
+
+.trashContainer {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

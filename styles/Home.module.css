@@ -1,0 +1,96 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 50px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchInputBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    background-color: #F5F2CB;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.magnifyingGlass {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.magnifyingGlass>path {
+    color: #5f2f80
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loadingIcon::after {
+    width: 80px !important;
+    height: 80px !important;
+    border: 5px solid #ebe7c3 !important;
+    border-right-color: transparent !important;
+    opacity: 1 !important;
+    margin-top: 50px !important;
+}
+
+.deleteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.deleteTitle {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.warning {
+    font-weight: 500;
+    color: #d72222;
+}
+
+.deleteBtnContainer {
+    display: flex;
+    justify-content: center;
+    column-gap: 75px;
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,95 @@
+.containerGalleryPhoto {
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.containerPhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 200px;
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #21274abd;
+    padding-bottom: 10px;
+    transition: scale 1s ease-in-out;
+}
+
+.containerPhoto>*:hover {
+    transform: scale(1.1);
+    transition: scale 1s ease-in-out;
+}
+
+.pictureTitle {
+    width: 200px;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.faStar {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.faStar path {
+    color: #fff
+}
+
+.starColor path {
+    color: yellow
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.groupBtnContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 50px;
+}
+
+.favoriteBtnContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.loadingIcon::after {
+    width: 80px !important;
+    height: 80px !important;
+    border: 5px solid #ebe7c3 !important;
+    border-right-color: transparent !important;
+    opacity: 1 !important;
+    margin-top: 50px !important;
+}

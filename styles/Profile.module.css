@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.profileImg {
+    position: relative;
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.profileImg:hover {
+    filter: brightness(1.1);
+}
+
+@media screen and (max-width: 1400px) {
+    .profileImg {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.profileImg>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #4b59a6;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+    width: 50%;
+    padding: 50px 50px 25px;
+    margin-left: -5%;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    width: 90%;
+}
+
+.label {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.disabled {
+    background-color: rgb(165, 165, 165);
+    color: rgb(106, 106, 106);
+    cursor: default;
+}
+
+.warning {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #d72222;
+    font-weight: bold;
+}
+
+.updateBtn {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.penIcon {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    font-size: 22px;
+    background-color: #4b59a6;
+    padding: 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.penIcon>path {
+    color: #fff
+}
+
+.penIcon:hover {
+    background-color: #5868bf;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+
+.loadingTitle {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.loadingIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.loadingIcon::after {
+    border: 2px solid #ebe7c3 !important;
+    border-right-color: transparent !important;
+    opacity: 1 !important;
+    margin-top: 25px !important;
+
+}
+
+.profileInput {
+    background-color: #ebe7c3;
+}

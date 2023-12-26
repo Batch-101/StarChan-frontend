@@ -1,0 +1,86 @@
+.galleryContainer {
+    margin: 50px 0 25px;
+}
+
+
+
+.containerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    width: 85%;
+    background-color: #21274abd;
+    border-radius: 8%;
+    background-size: contain;
+    padding-bottom: 25px;
+
+}
+
+
+.text:last-child {
+    margin-top: 50px;
+}
+
+
+.titlePicture {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.pictureAndProfileContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 75px;
+    align-items: center;
+
+}
+
+.pictureDetailledContainer {
+    width: 50%;
+    margin-top: 25px;
+}
+
+.pictureDetailledContainer>img {
+    border-radius: 10px;
+}
+
+.textContainer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 75px;
+
+
+}
+
+.profilImage {
+    text-align: center;
+}
+
+
+.imgProfile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4b59a6;
+}
+
+
+
+.text1 {
+    word-wrap: break-word;
+    margin-bottom: 25px;
+}
+
+.place {
+    margin-top: 15px;
+}

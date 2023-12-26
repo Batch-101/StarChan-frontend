@@ -1,0 +1,89 @@
+.navContainer {
+    height: 120px;
+    width: 100%;
+    background: url('../public/images/background.png') no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    background-color: #21274abd;
+}
+
+.logoContainer {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 120px;
+    cursor: pointer;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 50px;
+    margin-left: 50px;
+    height: 100%;
+    width: 50%;
+}
+
+.linksContainer>a {
+    font-size: 36px;
+    color: #f4cbdb
+}
+
+.linksContainer>a:hover {
+    color: #C7A5B2;
+}
+
+.logBtnContainer {
+    position: relative;
+}
+
+.profileImg {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.popoverContainer {
+    width: 200px;
+}
+
+.popoverList {
+    width: 100%;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popoverList_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    font-size: 20px;
+    border-bottom: 1px solid #F5F2CB;
+    cursor: pointer;
+    background-image: url('../public/images/popover-bg.png');
+
+}
+
+.popoverList_item:hover {
+    filter: brightness(1.2);
+}
