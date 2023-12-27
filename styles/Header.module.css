@@ -81,7 +81,11 @@
     border-bottom: 1px solid #F5F2CB;
     cursor: pointer;
     background-image: url('../public/images/popover-bg.png');
+}
 
+.popoverList_item>* {
+    width: 100%;
+    height: 100%;
 }
 
 .popoverList_item:hover {
