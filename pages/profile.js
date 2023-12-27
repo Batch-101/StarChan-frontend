@@ -202,8 +202,6 @@ function ProfilePage() {
         console.log('error code ' + error.code + ': ' + error.message)
     }
 
-    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)";
-
 
     const customStyles = {
         overlay: {
@@ -243,10 +241,10 @@ function ProfilePage() {
                         maxFileSize={4500000}
                         minFileSize={0}
                         clickable>
-                        <img data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} src={imgFile ? imgFile.preview.url : profilePicture} alt="profileImg" />
+                        <img src={imgFile ? imgFile.preview.url : profilePicture} alt="profileImg" />
                         <FontAwesomeIcon icon={faPen} className={styles.penIcon} />
                     </Files>
-                    <Tooltip id="imgTooltip" style={{ backgroundColor: "#21274A", color: "#ebe7c3" }} />
+                    <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} content="Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)" />
                 </div>
                 <div className={styles.infoContainer}>
 
