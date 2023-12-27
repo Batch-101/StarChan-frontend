@@ -129,7 +129,7 @@
     background-color: #ebe7c3;
 }
 
-.loadingIcon::after {
+.imgLoadingIcon::after {
     width: 80px !important;
     height: 80px !important;
     border: 5px solid #ebe7c3 !important;

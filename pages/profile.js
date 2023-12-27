@@ -13,8 +13,7 @@ import { LoadingIcon } from '../modules/LoadingIcon';
 import '@vivid-planet/react-image/dist/react-image.css';
 import Modal from 'react-modal';
 import ForbiddenAccess from '../components/ForbiddenAccess';
-import { LoadingIcon } from '../modules/LoadingIcon';
-import '@vivid-planet/react-image/dist/react-image.css';
+
 
 
 
@@ -249,7 +248,7 @@ function ProfilePage() {
                                 <FontAwesomeIcon icon={faPen} className={styles.penIcon} />
                             </>
                             :
-                            <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
+                            <LoadingIcon src="" className={styles.imgLoadingIcon} width={0} height={0} />
 
                         }
                     </Files>
