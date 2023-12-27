@@ -122,7 +122,7 @@ function NewPicture(props) {
 
             {/* création de l'encart pour cliquer glisser ou télécharger l'image */}
 
-            <div className={styles.imgContainer} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>
+            <div className={styles.imgContainer} data-tooltip-id="imgTooltip">
                 <Files
                     className={styles.subjectImg}
                     onChange={handleChange}
@@ -140,7 +140,7 @@ function NewPicture(props) {
                 </Files>
 
             </div>
-            <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
+            <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} content="Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)" />
 
             <div className={styles.inputContainer}>
                 <input className={`input ${styles.inputText}`} onChange={(e) => setPhotoPlace(e.target.value)} value={photoPlace} type="text" placeholder="Lieu de prise de votre photo" />

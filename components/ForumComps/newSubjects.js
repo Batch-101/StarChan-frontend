@@ -177,7 +177,7 @@ function NewSubjects(props) {
 
             <div className={styles.bottomContainer}>
 
-                <div className={styles.imgContainer} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>
+                <div className={styles.imgContainer} data-tooltip-id="imgTooltip">
                     <Files
                         className={styles.subjectImg}
                         onChange={handleChange}
@@ -194,7 +194,8 @@ function NewSubjects(props) {
                         }
                     </Files>
                 </div>
-                <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
+                <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} content="Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)" />
+
                 <div>
                     {isFormValid
                         ?
