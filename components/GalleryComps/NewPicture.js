@@ -122,7 +122,7 @@ function NewPicture(props) {
 
             {/* création de l'encart pour cliquer glisser ou télécharger l'image */}
 
-            <div className={styles.imgContainer} data-tooltip-id="imgTooltip">
+            <div className={styles.imgContainer}>
                 <Files
                     className={styles.subjectImg}
                     onChange={handleChange}
@@ -133,9 +133,9 @@ function NewPicture(props) {
                     clickable>
                     {imgFile
                         ?
-                        <img src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
+                        <img src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" data-tooltip-id="imgTooltip" />
                         :
-                        <p className={styles.insertImg}>Insérer une image</p>
+                        <p className={styles.insertImg} data-tooltip-id="imgTooltip">Insérer une image</p>
                     }
                 </Files>
 
