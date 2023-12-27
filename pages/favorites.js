@@ -68,19 +68,26 @@ function FavoritesPage() {
                         (
                             favoritesElements.length
                                 ?
-                                <div className={styles.containerGalleryPhoto}>{favoritesElements.reverse()}</div>
+                                <>
+                                    <div className={styles.containerGalleryPhoto}>{favoritesElements.reverse()}</div>
+                                    <div className={styles.favoriteBtnContainer}>
+                                        <Link className='btn newSubject' href="/gallery"> Retour à la galerie </Link>
+                                    </div>
+                                </>
                                 :
-                                <div className={styles.containerGalleryPhoto}>
-                                    <p style={{ width: '100%', textAlign: 'center' }}>Vous n'avez pas encore de photos en favoris.</p>
-                                </div>
+                                <>
+                                    <div className={styles.containerGalleryPhoto}>
+                                        <p style={{ width: '100%', textAlign: 'center' }}>Vous n'avez pas encore de photos en favoris.</p>
+                                    </div>
+                                    <div className={styles.favoriteBtnContainer}>
+                                        <Link className='btn newSubject' href="/gallery"> Retour à la galerie </Link>
+                                    </div>
+                                </>
                         )
                         :
                         <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
                     }
 
-                    <div className={styles.favoriteBtnContainer}>
-                        <Link className='btn newSubject' href="/gallery"> Retour à la galerie </Link>
-                    </div>
                 </div>
             </div>
         </>
