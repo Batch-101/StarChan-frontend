@@ -28,8 +28,8 @@ function FavoritesPage() {
             .then(response => response.json())
             .then(favoritesData => {
                 setFavorites(favoritesData.favorites);
+                setFavoritesLoaded(true)
             });
-        setFavoritesLoaded(true)
     }, [isFavoriteAdded]);
 
 

@@ -94,3 +94,13 @@
 .popoverList_item:hover {
     filter: brightness(1.2);
 }
+
+
+.loadingIcon::after {
+    width: 60px !important;
+    height: 60px !important;
+    border: 5px solid #ebe7c3 !important;
+    border-right-color: transparent !important;
+    opacity: 1 !important;
+    margin-top: 50px !important;
+}

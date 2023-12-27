@@ -13,6 +13,8 @@ import { LoadingIcon } from '../modules/LoadingIcon';
 import '@vivid-planet/react-image/dist/react-image.css';
 import Modal from 'react-modal';
 import ForbiddenAccess from '../components/ForbiddenAccess';
+import { LoadingIcon } from '../modules/LoadingIcon';
+import '@vivid-planet/react-image/dist/react-image.css';
 
 
 
@@ -241,8 +243,15 @@ function ProfilePage() {
                         maxFileSize={4500000}
                         minFileSize={0}
                         clickable>
-                        {profilePicture && <img data-tooltip-id="imgTooltip" src={imgFile.preview ? imgFile.preview.url : profilePicture} alt="profileImg" />}
-                        <FontAwesomeIcon icon={faPen} className={styles.penIcon} />
+                        {profilePicture ?
+                            <>
+                                <img data-tooltip-id="imgTooltip" src={imgFile.preview ? imgFile.preview.url : profilePicture} alt="profileImg" />
+                                <FontAwesomeIcon icon={faPen} className={styles.penIcon} />
+                            </>
+                            :
+                            <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
+
+                        }
                     </Files>
                     <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} content="Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)" />
                 </div>

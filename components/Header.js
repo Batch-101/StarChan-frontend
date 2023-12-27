@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../reducers/user';
 import { Popover } from 'react-tiny-popover';
-
+import { LoadingIcon } from '../modules/LoadingIcon';
+import '@vivid-planet/react-image/dist/react-image.css';
 
 
 function Header(props) {
@@ -124,7 +125,12 @@ function Header(props) {
                                 >
 
                                     <div className={styles.profileImg} onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-                                        {profilePicture && <Image src={profilePicture} width={80} height={80} alt="profileImg" />}
+                                        {profilePicture
+                                            ?
+                                            <Image src={profilePicture} width={80} height={80} alt="profileImg" />
+                                            :
+                                            <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
+                                        }
                                     </div>
 
                                 </Popover>
