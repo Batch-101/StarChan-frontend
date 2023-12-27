@@ -14,23 +14,15 @@ function detailledPicture(props) {
     const [pictureData, setPictureData] = useState({});
 
 
-
-
     useEffect(() => {
         if (router.isReady) {
             fetch(`https://starchan-backend.vercel.app/gallery/${pictureId}`)
                 .then(response => response.json())
                 .then(data => {
                     setPictureData(data.picture)
-                    console.log(data.picture)
                 })
         }
     }, [router.isReady])
-
-
-
-    console.log(pictureData)
-
 
 
     return (
@@ -48,8 +40,6 @@ function detailledPicture(props) {
                     </div>
 
 
-
-
                     <div className={styles.profilImage}>
                         <Image src={pictureData.user.link} width={100} height={100} alt="profileImg" className={styles.imgProfile} />
 
@@ -57,8 +47,6 @@ function detailledPicture(props) {
                         <p className={styles.text}>{TimeAgo(pictureData.date)}</p>
 
                     </div>
-
-
 
 
                 </div>
