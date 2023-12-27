@@ -30,8 +30,6 @@ function NewSubjects(props) {
 
     const isFormValid = isTitleValid && isMessageValid && isCategoryValid;
 
-    const tooltipStr = `Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo) Celle-ci apparaîtra au début de votre message`;
-
     useEffect(() => {
         fetch('https://starchan-backend.vercel.app/categories')
             .then(response => response.json())
@@ -179,7 +177,7 @@ function NewSubjects(props) {
 
             <div className={styles.bottomContainer}>
 
-                <div className={styles.imgContainer}>
+                <div className={styles.imgContainer} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>
                     <Files
                         className={styles.subjectImg}
                         onChange={handleChange}
@@ -190,9 +188,9 @@ function NewSubjects(props) {
                         clickable>
                         {imgFile
                             ?
-                            <img data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
+                            <img src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
                             :
-                            <p data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} className={styles.insertImg}>Insérer une image</p>
+                            <p className={styles.insertImg}>Insérer une image</p>
                         }
                     </Files>
                     <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />

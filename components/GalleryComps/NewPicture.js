@@ -49,8 +49,6 @@ function NewPicture(props) {
 
     // insérer la photo par cliquer glisser ou par l'ouverture de l'explorateur de fichiers
 
-    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)";
-
     const handleChange = (files) => {
         setImgFile(files[0]);
     }
@@ -124,7 +122,7 @@ function NewPicture(props) {
 
             {/* création de l'encart pour cliquer glisser ou télécharger l'image */}
 
-            <div className={styles.imgContainer}>
+            <div className={styles.imgContainer} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>
                 <Files
                     className={styles.subjectImg}
                     onChange={handleChange}
@@ -135,9 +133,9 @@ function NewPicture(props) {
                     clickable>
                     {imgFile
                         ?
-                        <img data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
+                        <img src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
                         :
-                        <p data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} className={styles.insertImg}>Insérer une image</p>
+                        <p className={styles.insertImg}>Insérer une image</p>
                     }
                 </Files>
                 <Tooltip id="imgTooltip" style={{ backgroundColor: "#21274A", color: "#ebe7c3" }} />

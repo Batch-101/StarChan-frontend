@@ -139,9 +139,9 @@ function newAnswer(props) {
                     clickable>
                     {imgFile
                         ?
-                        <img data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" />
+                        <img src={imgFile.preview.url ? imgFile.preview.url : ''} alt="Insérer une image" data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"} />
                         :
-                        <p data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} className={styles.insertImg}>Insérer une image</p>
+                        <p className={styles.insertImg} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>Insérer une image</p>
                     }
                 </Files>
                 <Tooltip id="imgTooltip" style={{ backgroundColor: "#21274A", color: "#ebe7c3" }} />
