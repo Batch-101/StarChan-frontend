@@ -198,10 +198,11 @@ function ProfilePage() {
     }
 
     const handleError = (error, file) => {
+        alert("Votre image est trop volumineuse (max 4.5Mo)");
         console.log('error code ' + error.code + ': ' + error.message)
     }
 
-    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 10Mo)";
+    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)";
 
 
     const customStyles = {
@@ -239,7 +240,7 @@ function ProfilePage() {
                         onChange={handleChange}
                         onError={handleError}
                         accepts={['image/png', 'image/jpg', 'image/jpeg']}
-                        maxFileSize={10000000}
+                        maxFileSize={4500000}
                         minFileSize={0}
                         clickable>
                         <img data-tooltip-id="imgTooltip" data-tooltip-content={tooltipStr} src={imgFile ? imgFile.preview.url : profilePicture} alt="profileImg" />
