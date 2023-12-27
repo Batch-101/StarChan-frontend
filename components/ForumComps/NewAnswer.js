@@ -79,6 +79,7 @@ function newAnswer(props) {
     }
 
     const handleError = (error, file) => {
+        alert("Votre image est trop volumineuse (max 4.5Mo)");
         console.log('error code ' + error.code + ': ' + error.message) //Permet de gérer les erreurs
     }
 

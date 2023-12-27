@@ -72,6 +72,7 @@ function NewPicture(props) {
                 console.log('image updated')
                 return data.url;
             } else {
+                alert("Votre image est trop volumineuse (max 4.5Mo)");
                 console.log('image update failed')
             }
 
