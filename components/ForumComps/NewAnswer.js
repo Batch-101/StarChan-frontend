@@ -144,7 +144,7 @@ function newAnswer(props) {
                         <p className={styles.insertImg} data-tooltip-id="imgTooltip" data-tooltip-content={"Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)"}>Insérer une image</p>
                     }
                 </Files>
-                <Tooltip id="imgTooltip" style={{ backgroundColor: "#21274A", color: "#ebe7c3" }} />
+                <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
                 {validMessage
                     ?
                     <button className='btn newSubject' id="subject" onClick={() => createNewAnswer()}>Répondre</button>

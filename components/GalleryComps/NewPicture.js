@@ -138,7 +138,7 @@ function NewPicture(props) {
                         <p className={styles.insertImg}>Insérer une image</p>
                     }
                 </Files>
-                <Tooltip id="imgTooltip" style={{ backgroundColor: "#21274A", color: "#ebe7c3" }} />
+                <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
 
             </div>
 
