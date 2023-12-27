@@ -49,7 +49,7 @@ function NewPicture(props) {
 
     // insérer la photo par cliquer glisser ou par l'ouverture de l'explorateur de fichiers
 
-    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 10Mo)";
+    const tooltipStr = "Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo)";
 
     const handleChange = (files) => {
         setImgFile(files[0]);
@@ -129,7 +129,7 @@ function NewPicture(props) {
                     onChange={handleChange}
                     onError={handleError}
                     accepts={['image/png', 'image/jpg', 'image/jpeg']}
-                    maxFileSize={10000000}
+                    maxFileSize={4500000}
                     minFileSize={0}
                     clickable>
                     {imgFile

@@ -30,7 +30,7 @@ function NewSubjects(props) {
 
     const isFormValid = isTitleValid && isMessageValid && isCategoryValid;
 
-    const tooltipStr = `Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 10Mo) Celle-ci apparaîtra au début de votre message`;
+    const tooltipStr = `Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo) Celle-ci apparaîtra au début de votre message`;
 
     useEffect(() => {
         fetch('https://starchan-backend.vercel.app/categories')
@@ -184,7 +184,7 @@ function NewSubjects(props) {
                         onChange={handleChange}
                         onError={handleError}
                         accepts={['image/png', 'image/jpg', 'image/jpeg']}
-                        maxFileSize={10000000}
+                        maxFileSize={4500000}
                         minFileSize={0}
                         clickable>
                         {imgFile

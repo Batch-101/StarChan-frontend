@@ -21,7 +21,7 @@ function newAnswer(props) {
     const validMessage = message.length > 0
 
 
-    const tooltipStr = `Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 10Mo) Celle-ci apparaîtra au début de votre réponse`;
+    const tooltipStr = `Cliquez ou glissez votre image (formats autorisés: .png, .jpg, .jpeg, max 4.5Mo) Celle-ci apparaîtra au début de votre réponse`;
 
     {/* La constante uploadImage permet de téléverser des images à la route backend pictures */ }
     const uploadImage = async () => {
@@ -133,7 +133,7 @@ function newAnswer(props) {
                     onChange={handleChange}
                     onError={handleError}
                     accepts={['image/png', 'image/jpg', 'image/jpeg']}
-                    maxFileSize={10000000}
+                    maxFileSize={4500000}
                     minFileSize={0}
                     clickable>
                     {imgFile
