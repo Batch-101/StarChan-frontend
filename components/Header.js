@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../reducers/user';
-import 'react-tooltip/dist/react-tooltip.css';
 import { Popover } from 'react-tiny-popover';
 
 

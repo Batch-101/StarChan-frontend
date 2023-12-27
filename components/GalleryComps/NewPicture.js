@@ -138,9 +138,9 @@ function NewPicture(props) {
                         <p className={styles.insertImg}>Insérer une image</p>
                     }
                 </Files>
-                <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
 
             </div>
+            <Tooltip id="imgTooltip" style={{ maxWidth: 450, backgroundColor: "#391c4d", opacity: 1, color: "#ebe7c3" }} />
 
             <div className={styles.inputContainer}>
                 <input className={`input ${styles.inputText}`} onChange={(e) => setPhotoPlace(e.target.value)} value={photoPlace} type="text" placeholder="Lieu de prise de votre photo" />
