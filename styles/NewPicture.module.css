@@ -30,9 +30,7 @@
 .inputText {
     background-color: #ebe7c3;
     color: #5f2f80;
-    margin-top: 10px;
-    padding-right: 200px;
-
+    margin-top: 25px;
 }
 
 .warning {
@@ -81,7 +79,6 @@
     outline: none;
     color: #5f2f80;
     width: 550px;
-    height: 270px;
     padding: 15px;
     font-size: 18px;
     margin-bottom: 15px;
@@ -123,15 +120,6 @@
     margin: 25px 0;
 }
 
-.inputTextDescription {
-    background-color: #ebe7c3;
-    color: #5f2f80;
-    margin-top: 10px;
-    padding-right: 20px;
-    height: 150px;
-    padding-top: 10px;
-    resize: none;
-}
 
 .imgContainer {
     display: flex;

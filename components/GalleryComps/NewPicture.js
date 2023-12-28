@@ -151,7 +151,7 @@ function NewPicture(props) {
 
             <div className={styles.inputContainer}>
 
-                <textarea className={`input ${styles.inputTextDescription}`} onChange={(e) => setPhotoDescription(e.target.value)} value={photoDescription} type="text" placeholder="Description, matériel utilisé..." />
+                <textarea className={`input ${styles.textarea}`} onChange={(e) => setPhotoDescription(e.target.value)} value={photoDescription} type="text" placeholder="Description, matériel utilisé..." />
                 {!isPhotoDescriptionValid &&
                     <p className={styles.warning} style={{ marginBottom: 0 }}>Veuillez remplir ce champ.</p>
                 }
