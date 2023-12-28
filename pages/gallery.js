@@ -176,7 +176,7 @@ const customStyles = {
         bottom: 'auto',
         width: '590px',
         marginRight: '-50%',
-        transform: 'translate(-50%, -60%)',
+        transform: 'translate(-50%, -50%)',
         backgroundColor: '#21274A',
         border: "none",
         borderRadius: "10px"
