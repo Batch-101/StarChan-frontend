@@ -112,7 +112,7 @@ function NewPicture(props) {
             <div className={styles.xMarkContainer}>
                 <FontAwesomeIcon icon={faXmark} className={styles.xMark} onClick={() => props.closeModal()} />
             </div>
-
+            <p className={styles.titleSubject} >Ajouter une nouvelle photo</p>
             <div className={styles.inputContainer}>
                 <input className={`input ${styles.inputText}`} onChange={(e) => setPhotoTitle(e.target.value)} value={photoTitle} type="text" placeholder="Titre" />
                 {!isTitleValid &&
