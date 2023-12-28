@@ -1,6 +1,6 @@
 import styles from '../../styles/Subject.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentDots, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import TimeAgo from '../../modules/TimeAgo';
@@ -35,7 +35,7 @@ function Subject(props) {
 
   return (
     <div className={styles.container}>
-      <Link href={{ pathname: '/subject', query: { q: subjectID, r: categoryID } }}>
+      <Link href={{ pathname: '/answers', query: { q: subjectID, r: categoryID } }}>
         <p className='subjects'>{title}</p>
       </Link>
       <div className={styles.detailsContainer}>

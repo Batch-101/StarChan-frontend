@@ -1,5 +1,4 @@
 import styles from '../styles/AnswerPage.module.css';
-import Subject from '../components/ForumComps/Subject';
 import NewAnswer from '../components/ForumComps/NewAnswer';
 import Answer from '../components/ForumComps/Answer';
 import Modal from 'react-modal';
