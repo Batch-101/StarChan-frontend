@@ -92,7 +92,7 @@ function NewSubjects(props) {
 
 
     const handleChange = (files) => {
-        setImgFile(files[0]);
+        setImgFile(files[0] ? files[0] : '');
     };
 
 
