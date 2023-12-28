@@ -151,7 +151,7 @@ function HomePage() {
             body: JSON.stringify({ keywords }),
         }
 
-        const subjResponse = await fetch('https://starchan-backend.vercel.app/home/search', config);
+        const subjResponse = await fetch('http://localhost:3000/home/search', config);
         const subjData = await subjResponse.json();
 
         if (subjData.result) {

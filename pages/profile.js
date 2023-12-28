@@ -195,7 +195,7 @@ function ProfilePage() {
     }
 
     const handleChange = (files) => {
-        setImgFile(files[0]);
+        setImgFile(files[0] ? files[0] : '');
     }
 
     const handleError = (error, file) => {
