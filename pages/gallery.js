@@ -111,7 +111,7 @@ function GalleryPage() {
                     <div className={styles.groupBtnContainer}>
 
                         <div className={styles.btnContainer}>
-                            <Link className='btn newSubject' href="/favorites"> Vos favoris </Link>
+                            <Link className='btn newSubject' href="/favorites"> Mes favoris </Link>
                             <button className='btn newSubject'
                                 onClick={() => { setNewPictureClicked(true); openModal() }}
                             >
