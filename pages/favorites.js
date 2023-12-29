@@ -61,7 +61,7 @@ function FavoritesPage() {
 
             <div className={styles.main}>
                 <div className={styles.container}>
-                    <h1 className='title'>Galerie photos</h1>
+                    <h1 className='title'>Mes favoris</h1>
 
                     {favoritesLoaded
                         ?
