@@ -72,7 +72,7 @@ function LoginPage() {
             } else if (loginParam == 'actus') {
                 router.push("/actus");
             } else {
-                router.push("/home");
+                router.push("/forum");
             }
         }
 
@@ -97,7 +97,7 @@ function LoginPage() {
             } else if (loginParam == 'actus') {
                 router.push("/actus");
             } else {
-                router.push("/home");
+                router.push("/forum");
             }
         } else {
             setConnectingFailed(true);
