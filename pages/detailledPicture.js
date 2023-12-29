@@ -1,11 +1,11 @@
 import styles from '../styles/DetailledPicture.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import TimeAgo from '../modules/TimeAgo'
 import Link from 'next/link';
+import { LoadingIcon } from '../modules/LoadingIcon';
+import '@vivid-planet/react-image/dist/react-image.css';
 
 function detailledPicture(props) {
 
@@ -14,12 +14,13 @@ function detailledPicture(props) {
     const [pictureData, setPictureData] = useState({});
 
 
+
     useEffect(() => {
         if (router.isReady) {
             fetch(`https://starchan-backend.vercel.app/gallery/${pictureId}`)
                 .then(response => response.json())
                 .then(data => {
-                    setPictureData(data.picture)
+                    setPictureData(data.picture);
                 })
         }
     }, [router.isReady])
@@ -35,13 +36,23 @@ function detailledPicture(props) {
                 <div className={styles.pictureAndProfileContainer}>
 
                     <div className={styles.pictureDetailledContainer}>
-                        {pictureData.link && <Image src={pictureData.link} alt={props.title} width="500" height="500" />}
+                        {pictureData.link
+                            ?
+                            <Image src={pictureData.link} alt={props.title} width="500" height="500" />
+                            :
+                            <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
+                        }
                         <p className={styles.place}>Lieu : {pictureData.place}</p>
                     </div>
 
 
                     <div className={styles.profilImage}>
-                        <Image src={pictureData.user.link} width={100} height={100} alt="profileImg" className={styles.imgProfile} />
+                        {pictureData.user.link
+                            ?
+                            <Image src={pictureData.user.link} width={100} height={100} alt="profileImg" className={styles.imgProfile} />
+                            :
+                            <LoadingIcon src="" className={styles.loadingIcon} width={0} height={0} />
+                        }
 
                         <p className={styles.text}>{pictureData.user.username}</p>
                         <p className={styles.text}>{TimeAgo(pictureData.date)}</p>
