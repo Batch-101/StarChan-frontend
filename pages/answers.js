@@ -97,7 +97,7 @@ function SubjectPage() {
 
             await fetch('https://starchan-backend.vercel.app/subjects/deleteSubjectById', config);
             closeDeleteModal();
-            router.push('/home');
+            router.push('/forum');
 
         } else {
 

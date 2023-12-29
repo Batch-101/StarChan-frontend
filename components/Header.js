@@ -74,7 +74,7 @@ function Header(props) {
 
                         <Link href="/" className={styles.navLink}> Accueil </Link>
 
-                        <Link href={!isLogged ? '/login' : '/home'} className={styles.navLink}> Forum </Link>
+                        <Link href={!isLogged ? '/login' : '/forum'} className={styles.navLink}> Forum </Link>
 
                         {/* Quand on clique sur "Galerie" et qu'on est pas connecté, on nous envoie vers la page de connexion
                            avec un paramètre "galerie" dans le lien, qui permettra de savoir si on vient par le Link "Galerie" 

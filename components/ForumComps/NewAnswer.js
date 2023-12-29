@@ -75,7 +75,7 @@ function newAnswer(props) {
     }
 
     const handleChange = (files) => {
-        setImgFile(files[0] ? files[0] : '');        //Permet d'insérer une image dans la réponse
+        setImgFile(files[0]);        //Permet d'insérer une image dans la réponse
     }
 
     const handleError = (error, file) => {

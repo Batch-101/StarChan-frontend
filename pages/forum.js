@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Forum.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Category from '../components/ForumComps/Category';
@@ -15,7 +15,7 @@ import '@vivid-planet/react-image/dist/react-image.css';
 
 Modal.setAppElement('body');
 
-function HomePage() {
+function ForumPage() {
 
     const connectedUser = useSelector(state => state.user.value);
 
@@ -151,7 +151,7 @@ function HomePage() {
             body: JSON.stringify({ keywords }),
         }
 
-        const subjResponse = await fetch('http://localhost:3000/home/search', config);
+        const subjResponse = await fetch('https://starchan-backend.vercel.app/forum/search', config);
         const subjData = await subjResponse.json();
 
         if (subjData.result) {
@@ -354,4 +354,4 @@ const customStyles = {
     },
 };
 
-export default HomePage;
+export default ForumPage;
